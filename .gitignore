@@ -1,0 +1,8 @@
+.settings/*
+.project
+.buildpath
+.sass-cache/*
+.sass-cache/*/*
+Icon
+Thumbs.db
+.DS_Store
