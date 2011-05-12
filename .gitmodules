@@ -1,0 +1,3 @@
+[submodule "extensions/compass-colors"]
+	path = extensions/compass-colors
+	url = https://github.com/chriseppstein/compass-colors.git

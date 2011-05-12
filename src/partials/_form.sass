@@ -1,0 +1,35 @@
+input, textarea
+  border: 1px solid $border_color2
+  background: $base_bg_color
+  color: $text_color2
+  padding: 3px 5px
+
+input:hover, input:focus, textarea:hover, textarea:focus
+  border: 1px solid $border_color3
+  color: $base_text_color
+  background: $header_color
+  outline: none
+
+.box select
+  margin: 5px 0
+
+input[type="text"]
+  cursor: text
+
+.sidebar input[type="text"]
+  width: 125px
+
+input[type="submit"], input[type="button"]
+  border: 1px solid $border_color2
+  background: $base_bg_color
+  color: $text_color2
+  &:hover
+    border: 1px solid $border_color3
+    background: $header_color
+    color: $base_text_color
+
+textarea
+  margin-bottom: 20px
+
+.box .submit input[type="submit"], .box .submit input[type="button"]
+  margin-left: 10px

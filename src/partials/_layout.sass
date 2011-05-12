@@ -1,0 +1,59 @@
+tbody .body
+  width: 100%
+
+#header, #content, #footer
+  +container
+
+#wrapper
+  position: relative
+  overflow: visible
+  height: 124px
+  background: $header_color
+  border-bottom: 1px solid $border_color
+
+#content
+  margin-top: 50px
+
+.sidebar
+  +column(3, true)
+  float: right
+  padding-left: 40px
+  width: 216px
+
+.main_column
+  +column($blueprint-grid-columns - 3)
+
+#header
+  height: 180px
+  overflow: visible
+  position: relative
+  z-index: 999
+
+#logo
+  +column(2)
+  margin-top: 97px
+
+#userinfo
+  +column($blueprint-grid-columns, true)
+  float: none
+  position: absolute
+  left: 0
+  top: 10px
+
+#menu
+  +column($blueprint-grid-columns - 2, true)
+
+#searchbars
+  +column($blueprint-grid-columns, true)
+  height: 25px
+  left: 0
+  overflow: visible
+  position: absolute
+  top: 133px
+  width: 960px
+
+#userinfo_username, #userinfo_major, #userinfo_minor
+  float: left
+  width: 120px
+
+

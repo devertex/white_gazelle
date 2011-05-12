@@ -1,0 +1,52 @@
+$urlicons: "http://dl.dropbox.com/u/16407036/what.cd/white.cd/images/forum_icons.png"
+$urlicons: "http://whatimg.com/images/99854999569638112010.png"
+$urlicons: "forum_icons.png"
+
+table tr
+  td.unread, td.unread_sticky,
+  td.read, td.read_sticky, 
+  td.read_locked_sticky, td.unread_locked_sticky
+    background: image-url($urlicons) no-repeat 10px 9px
+    padding-left: 15px
+  td
+    div.cats_audiobooks,
+    div.cats_ebooks,
+    div.cats_applications,
+    div.cats_music,
+    div.cats_elearningvideos,
+    div.cats_comedy,
+    div.cats_comics
+      background: image-url($urlicons) no-repeat -128px -28px
+      height: 16px
+      width: 16px
+    div.cats_ebooks
+      background-position: -154px 1px
+    div.cats_applications
+      background-position: -206px 1px
+    div.cats_music
+      background-position: -128px 1px
+    div.cats_elearningvideos
+      background-position: -180px -29px
+    div.cats_comedy
+      background-position: -207px -29px
+    div.cats_comics
+      background-position: -155px -29px
+  td.read_sticky
+    background-position: -42px 9px
+  td.unread_sticky
+    background-position: -42px -20px
+  td.read_locked_sticky
+    background-position: -94px 9px
+  td.unread_locked_sticky
+    background-position: -94px -20px
+
+.hide_torrents a.show_torrents_link, .show_torrents a.show_torrents_link
+  background: image-url($urlicons) no-repeat 4px -50px
+  display: block
+  height: 16px
+  width: 16px
+  &:active, &:focus
+    outline: 0
+
+.hide_torrents a.show_torrents_link
+  background-position: -23px -50px

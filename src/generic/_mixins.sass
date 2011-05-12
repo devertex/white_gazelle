@@ -1,0 +1,19 @@
+@mixin visible($v: true)
+  @if $v == true
+    visibility: visible
+  @else
+    visibility: hidden
+
+@mixin hidden($display)
+  visibility: hidden
+  display: none
+
+@mixin hover-visibility-hidden($duration: 0.3s)
+  +visible(false)
+  +opacity(0)
+  +transition(opacity visibility, $duration, ease)
+
+@mixin hover-visibility-visible($duration: 0.3s)
+  +visible
+  +opacity(1)
+  +transition(opacity visibility, $duration, ease)

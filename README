@@ -1,0 +1,4 @@
+git clone git://github.com/devertex/white_gazelle.git
+cd white_gazelle
+git submodule init
+git submodule update

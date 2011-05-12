@@ -1,0 +1,141 @@
+$menu_font_size: 13px !default
+$menu_item_margin_left: 20px !default
+$menu_text_transform: uppercase !default
+
+#header
+  ul
+    +reset-box-model
+  #userinfo
+    +hover-visibility-hidden(0.7s)
+  &:hover
+    #userinfo
+      +hover-visibility-visible
+  ul li
+    list-style: none
+  a, a:hover, a:active, a:link, a:focus
+    text-decoration: none
+    color: $text_color3
+  a:hover
+    color: $base_text_color
+  a.username
+    color: $text_color3
+    font-weight: bold
+    &:active, &:link, &:focus
+      color: $text_color3
+    &:hover
+      color: $base_text_color
+
+#logo
+  a
+    background: image-url($logo) no-repeat
+    display: block
+    height: image-height($logo)
+    width: image-width($logo)
+    
+    +opacity(0.3)
+    +transition(opacity, 0.8s, ease)
+    
+    &:active, &:focus
+      outline: 0
+    &:hover, &:focus
+      +opacity(0.7)
+      +transition(opacity, 0.4s, ease)
+
+#userinfo
+  font-size: 11px
+
+#searchbars
+  ul
+    +reset-box-model
+    padding: 0
+    li
+      display: inline
+      float: left
+      margin-right: 17px
+    li:last-child
+      margin-right: 0
+      
+  form ul
+    background: $base_bg_color
+    margin-left: 2px
+    padding: 10px
+    width: 130px
+    z-index: 999
+    +single-box-shadow($border_color2, 0, 1px, 4px, 0, false)
+    li
+      cursor: pointer
+      display: block
+      float: none
+      padding: 0 5px
+      
+      &.highlight
+        color: $link-color
+  
+  form
+    width: 142px
+  input
+    width: 100%
+
+#userinfo_username, #userinfo_major, #userinfo_minor
+  li
+    font-size: 11px
+
+#alerts
+  position: absolute
+  top: 152px
+  text-align: right
+  padding-right: 3px
+  display: block
+  width: 100%
+
+.alertbar
+  display: inline
+  margin-left: 10px
+
+#userinfo_minor
+  width: 260px + 100px
+  li
+    float: left
+    width: 160px
+
+#header
+  #userinfo_major, #userinfo_minor
+    padding-left: 60px
+    border-left: 1px solid $border_color2
+
+#userinfo_stats
+  font-size: 10px
+  position: absolute
+  right: 0
+  text-align: right
+  top: 0
+
+#menu
+  left: 196px
+  position: absolute
+  top: 100px - 30px + 14px
+  text-align: right
+  ul
+    li
+      display: inline
+      font-size: $menu_font_size
+      margin-left: $menu_item_margin_left
+      text-transform: $menu_text_transform
+
+#menu li a
+  color: $text_color3
+  &:active, &:link
+    color: $text_color3
+  &:hover, &:focus
+    color: $base_text_color
+
+.my_reqBuffer, .my_demBuffer
+  color: $text_color2
+  position: absolute
+  right: 135px
+  width: 130px
+  text-align: left
+  top: 0px
+
+.my_demBuffer
+  top: 1.6em

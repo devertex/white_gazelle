@@ -1,0 +1,51 @@
+.group, .colhead
+  background: $header_color
+  padding: 10px
+
+table
+  border: 1px solid $border_color
+  margin: 20px 0
+  width: 100%
+  td
+    border-bottom: 1px solid $border_color
+    padding: 8px
+    vertical-align: top
+  tr:last-of-type td
+    border-bottom: 0
+
+table#taglist, table.cat_list, .filter_torrents table:first-of-type, 
+#collage #content form:first-of-type table
+  margin: 5px 0
+  td
+    background: $border_color
+    border-bottom: 0
+
+table#taglist td
+  padding: 2px 8px
+
+table .time
+  float: none
+
+.colhead td
+  font-weight: bold
+
+.filter_torrents
+  div.submit
+    margin-top: 10px
+    text-align: right
+    span
+      padding-top: 3px
+    input:last-of-type
+      margin-left: 0
+
+#collage_table
+  border: 0
+  width: inherit
+  td
+    background: none
+    padding: 2px
+    text-align: center
+    vertical-align: middle
+
+table tr td.edition_info
+  background: $border_color3
