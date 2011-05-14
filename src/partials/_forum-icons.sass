@@ -1,6 +1,4 @@
-$urlicons: "http://dl.dropbox.com/u/16407036/what.cd/white.cd/images/forum_icons.png"
-$urlicons: "http://whatimg.com/images/99854999569638112010.png"
-$urlicons: "forum_icons.png"
+$urlicons: "forum_icons.png" !default
 
 table tr
   td.unread, td.unread_sticky,
@@ -39,6 +37,16 @@ table tr
     background-position: -94px 9px
   td.unread_locked_sticky
     background-position: -94px -20px
+
+.last_read
+  height: 15px
+  width: 15px
+  margin-left: 5px
+  a
+    display: block
+    background: image-url("go_last_read.png") no-repeat 0 80%
+    width: 100%
+    height: 100%
 
 .hide_torrents a.show_torrents_link, .show_torrents a.show_torrents_link
   background: image-url($urlicons) no-repeat 4px -50px

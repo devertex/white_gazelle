@@ -2,6 +2,14 @@ $menu_font_size: 13px !default
 $menu_item_margin_left: 20px !default
 $menu_text_transform: uppercase !default
 
+$header_link_color: $text_color3 !default
+$header_link_color_hover: $base_text_color !default
+
+$menu_item_padding: false !default
+$menu_item_bg_over: false !default
+
+$header_separator_color: $border_color2 !default
+
 #header
   ul
     +reset-box-model
@@ -14,16 +22,16 @@ $menu_text_transform: uppercase !default
     list-style: none
   a, a:hover, a:active, a:link, a:focus
     text-decoration: none
-    color: $text_color3
+    color: $header_link_color
   a:hover
-    color: $base_text_color
+    color: $header_link_color_hover
   a.username
-    color: $text_color3
+    color: $header_link_color
     font-weight: bold
     &:active, &:link, &:focus
-      color: $text_color3
+      color: $header_link_color
     &:hover
-      color: $base_text_color
+      color: $header_link_color_hover
 
 #logo
   a
@@ -101,7 +109,7 @@ $menu_text_transform: uppercase !default
 #header
   #userinfo_major, #userinfo_minor
     padding-left: 60px
-    border-left: 1px solid $border_color2
+    border-left: 1px solid $header_separator_color
 
 #userinfo_stats
   font-size: 10px
@@ -121,13 +129,21 @@ $menu_text_transform: uppercase !default
       font-size: $menu_font_size
       margin-left: $menu_item_margin_left
       text-transform: $menu_text_transform
+      
+      a
+        @if $menu_item_padding != false
+          padding: $menu_item_padding
+        
+        &:hover, &:focus
+          @if $menu_item_bg_over != false
+            background: $menu_item_bg_over
 
 #menu li a
-  color: $text_color3
+  color: $header_link_color
   &:active, &:link
-    color: $text_color3
+    color: $header_link_color
   &:hover, &:focus
-    color: $base_text_color
+    color: $header_link_color_hover
 
 .my_reqBuffer, .my_demBuffer
   color: $text_color2
