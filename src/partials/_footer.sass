@@ -1,10 +1,19 @@
+$footer_color: $base_text_color !default
+$footer_background: $header_bg_color !default
+$footer_border_top: 1px solid $border_color !default
+
+$footer_padding: 10px !default
+
 #footer
-  background: $header_bg_color
-  border-top: 1px solid $border_color
-  padding: 10px 0
+  background: $footer_background
+  border-top: $footer_border_top
+  padding: $footer_padding 0
   margin-left: 0
   margin-top: 40px
   text-align: center
   width: 100%
+  @if $footer_color != $base_text_color
+    color: $footer_color
+  
   .time
     float: none
