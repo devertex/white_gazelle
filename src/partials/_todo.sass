@@ -52,13 +52,13 @@ ul.stats
   
   @if $colhead_dark_color
     color: $colhead_dark_color
-
+    
+  @if $border_radius != 0
+    +border-radius($border_radius, $border_radius)
 
 #content
   margin-top: 30px
   z-index: 100
-
-
 
 #disclaimer_container
   width: 700px

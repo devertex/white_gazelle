@@ -1,23 +1,27 @@
 .group, .colhead
   background: $header_color
   padding: 10px
+  @if $border_radius != 0
+    +border-radius($border_radius, $border_radius)
 
 table
   border: 1px solid $border_color
   margin: 20px 0
   width: 100%
+  
   td
     border-bottom: 1px solid $border_color
     padding: 8px
     vertical-align: top
-  tr:last-of-type td
+  tr:last-child td
     border-bottom: 0
 
 table#taglist, table.cat_list, .filter_torrents table:first-of-type, 
 #collage #content form:first-of-type table
   margin: 5px 0
+  background: $header_color
+
   td
-    background: $border_color
     border-bottom: 0
 
 table#taglist td

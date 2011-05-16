@@ -9,6 +9,8 @@ blockquote, .save_message
   font-style: italic
   margin: 10px 0
   padding: 20px
+  @if $border_radius != 0
+    +border-radius($border_radius, $border_radius)
 
 .save_message
   text-align: center
@@ -20,6 +22,8 @@ blockquote, .save_message
     background: $graph_background
     display: block
     height: 3px
+    @if $border_radius != 0
+      +border-radius($border_radius, $border_radius)
 
 .poll
   padding: 0

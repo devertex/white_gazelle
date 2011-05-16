@@ -1,5 +1,6 @@
 $footer_color: $base_text_color !default
-$footer_background: $header_bg_color !default
+$footer_background: $header_background_color !default
+$footer_background_gradient_color2: $header_background_gradient_color2 !default
 $footer_border_top: 1px solid $border_color !default
 
 $footer_padding: 10px !default
@@ -14,6 +15,8 @@ $footer_padding: 10px !default
   width: 100%
   @if $footer_color != $base_text_color
     color: $footer_color
-  
+  @if $header_background_gradient_color2 != $footer_background
+    +linear-gradient(color-stops($footer_background, $footer_background_gradient_color2))
   .time
     float: none
+    

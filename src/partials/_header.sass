@@ -11,7 +11,23 @@ $menu_item_padding: false !default
 $menu_item_bg_over: false !default
 
 $header_separator_color: $border_color2 !default
+$header_border_bottom: 1px solid $border_color !default
+$header_background_gradient_color2: $header_background_color !default
+$header_shadow_color: false !default
 
+#wrapper
+  position: relative
+  overflow: visible
+  height: 124px
+  background: $header_background_color
+  border-bottom: $header_border_bottom
+  @if $header_shadow_color
+    +single-box-shadow($header_shadow_color, 0, 1px, 7px, false, false)
+  
+  
+  @if $header_background_gradient_color2 != $header_background_color
+    +linear-gradient(color-stops($header_background_color, $header_background_gradient_color2))
+  
 #header
   ul
     +reset-box-model

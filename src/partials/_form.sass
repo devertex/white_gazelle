@@ -3,6 +3,8 @@ input, textarea
   background: $base_bg_color
   color: $text_color2
   padding: 3px 5px
+  @if $border_radius != 0
+    +border-radius($border_radius, $border_radius)
 
 input:hover, input:focus, textarea:hover, textarea:focus
   border: 1px solid $border_color3
