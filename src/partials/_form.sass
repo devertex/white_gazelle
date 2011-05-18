@@ -1,15 +1,22 @@
+$input_background: $base_bg !default
+$input_background_hover: $header_color !default
+$input_border_color: $border_color2 !default
+$input_border_color_hover: $border_color3 !default
+$input_shadow_color: false !default
 input, textarea
-  border: 1px solid $border_color2
-  background: $base_bg_color
+  border: 1px solid $input_border_color
+  background: $input_background
   color: $text_color2
   padding: 3px 5px
   @if $border_radius != 0
     +border-radius($border_radius, $border_radius)
+  @if $input_shadow_color
+    +single-box-shadow($input_shadow_color, 1px, 1px, 3px, false, inset)
 
 input:hover, input:focus, textarea:hover, textarea:focus
-  border: 1px solid $border_color3
+  border: 1px solid $input_border_color_hover
   color: $base_text_color
-  background: $header_color
+  background: $input_background_hover
   outline: none
 
 .box select
@@ -23,7 +30,7 @@ input[type="text"]
 
 input[type="submit"], input[type="button"]
   border: 1px solid $border_color2
-  background: $base_bg_color
+  background: $base_bg
   color: $text_color2
   &:hover
     border: 1px solid $border_color3

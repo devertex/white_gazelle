@@ -1,6 +1,10 @@
+$base_bg_image: false !default
 
 body
-  background: $base_bg_color
+  @if $base_bg_image
+    background: $base_bg $base_bg_image
+  @else
+    background: $base_bg
 
 .sidebar
   border-left: 1px solid $border_color
