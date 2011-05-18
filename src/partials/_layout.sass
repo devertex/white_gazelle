@@ -1,13 +1,16 @@
+$content_margin_top: 50px !default
+$content_min_height: 500px !default
 
 
-tbody .body
-  width: 100%
+body
+  min-width: $blueprint-container-size + 20px
 
 #header, #content, #footer
   +container
 
 #content
-  margin-top: 50px
+  margin-top: $content_margin_top
+  min-height: $content_min_height
 
 .sidebar
   +column(3, true)
